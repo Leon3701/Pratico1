@@ -1,0 +1,59 @@
+
+/* Set a fixed height for the carousel items */
+.carousel-item {
+    height: 400px; /* Adjust this value to your desired height */
+}
+
+/* Force images to fill the height without stretching */
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Crops image to fill area without distortion */
+    object-position: center; /* Centers the image focus */
+}   
+
+.btn-txt{
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+}
+
+
+
+.card{
+    width: 200px;
+}
+
+
+
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 0 20px;
+}
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+footer .footer-bottom {
+    border-top: 1px solid #4b545c;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
+main {
+    background-color: #ffe4c4;
+    padding-top: 110px;
+}
+
+.img-fill {
+    height: 300px;
+    object-fit: fill;
+}
