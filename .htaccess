@@ -1,0 +1,4 @@
+# Sin listado de carpetas
+Options -Indexes
+
+DirectoryIndex index.php index.html

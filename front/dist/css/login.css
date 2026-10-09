@@ -1,0 +1,32 @@
+/* Página de inicio de sesión: mismos colores que la landing page */
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-page main {
+    flex: 1;
+    background-color: #ffe4c4;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    border: none;
+    border-radius: 12px;
+}
+
+.login-logo {
+    width: 80px;
+}
+
+.login-page footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
