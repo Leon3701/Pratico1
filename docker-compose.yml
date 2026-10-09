@@ -1,0 +1,38 @@
+# Levanta la aplicación con:  docker compose up -d
+#   Sitio:       http://localhost:8080
+#   phpMyAdmin:  http://localhost:8081  (usuario: root / contraseña: root)
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_NAME: biblioteca_virtual
+      DB_USER: root
+      DB_PASS: root
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./database/biblioteca.sql:/docker-entrypoint-initdb.d/biblioteca.sql:ro
+      - datos_mysql:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+
+volumes:
+  datos_mysql:

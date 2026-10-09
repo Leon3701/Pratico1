@@ -1,0 +1,62 @@
+/* Dashboard de administración: interfaz oscura, separada de la landing pública */
+
+:root {
+    --admin-topbar: 56px;
+    --admin-sidebar: 240px;
+}
+
+body.admin {
+    background-color: #f4f5f7;
+    padding-top: var(--admin-topbar);
+}
+
+.admin-topbar {
+    height: var(--admin-topbar);
+}
+
+.admin-sidebar .nav-link {
+    color: #ced4da;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.admin-sidebar .nav-link.disabled {
+    color: #6c757d;
+}
+
+/* En escritorio el menú queda fijo a la izquierda */
+@media (min-width: 992px) {
+    .admin-sidebar {
+        position: fixed;
+        top: var(--admin-topbar);
+        bottom: 0;
+        left: 0;
+        width: var(--admin-sidebar);
+        overflow-y: auto;
+    }
+
+    .admin-content {
+        margin-left: var(--admin-sidebar);
+    }
+}
+
+.stat-card {
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.admin-thumb {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 4px;
+}
